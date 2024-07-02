@@ -4,19 +4,19 @@ pipeline {
 
     stage('Compile') {
       steps{
-        sh 'mvn clean compile'
+        sh '/home/ubuntu/apache-maven-3.9.8/bin/mvn clean compile'
       }
     }
 
     stage('UnitTest') {
       steps{
-        sh 'mvn clean test'
+        sh '/home/ubuntu/apache-maven-3.9.8/bin/mvn clean test'
       }
     }
 
     stage('Package') {
       steps{
-        sh 'mvn clean package'
+        sh '/home/ubuntu/apache-maven-3.9.8/bin/mvn clean package'
       }
     }
   }
